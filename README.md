@@ -1,4 +1,4 @@
-#Jessie box for Vagrant
+#Jessie box for Vagrant (virtualbox)
 
 This repo contain definition files to build a
 [Vagrant](http://www.vagrantup.com) box based on the weekly Debian Jessie
