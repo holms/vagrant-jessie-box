@@ -8,7 +8,7 @@ Veewee::Definition.declare({
   :os_type_id => 'Debian_64',
   :iso_file => "debian-testing-amd64-netinst.iso",
   :iso_src => "http://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso",
-  :iso_md5 => "c75d2ab07cfd9d8ab7207700ff61b449",
+  :iso_md5 => "892272f1ec0d8bc6fbcfc127e6683f43",
   :iso_download_timeout => "1000",
   :boot_wait => "10", :boot_cmd_sequence => [
      '<Esc>',
