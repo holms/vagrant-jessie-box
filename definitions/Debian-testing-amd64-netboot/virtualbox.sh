@@ -7,23 +7,21 @@ if test -f .vbox_version ; then
   rmmod vboxguest
   aptitude -y purge virtualbox-ose-guest-x11 virtualbox-ose-guest-dkms virtualbox-ose-guest-utils
 
-  # Install dkms for dynamic compiles
-
-  apt-get install -y dkms
-
-  # If libdbus is not installed, virtualbox will not autostart
-  apt-get -y install --no-install-recommends libdbus-1-3
-
+  # In all lines starting with "deb ", "deb [tab]", or "deb-",
+  # delete all instances of "contrib" and "non-free",
+  # replace all instances of "main" with "main contrib nonfree"
+  sed -e "/^[ \t]*deb[ \t-]/ s/[ \t]contrib//g"\
+  -e "/^[ \t]*deb[ \t-]/ s/[ \t]non-free//g"\
+  -e "/^[ \t]*deb[ \t-]/ s/[ \t]main/ main contrib non-free /g"\
+  "/etc/apt/sources.list" > "/etc/apt/sources.list.new"
+  mv /etc/apt/sources.list.new /etc/apt/sources.list
+  
+  apt-get update
   # Install the VirtualBox guest additions
-  VBOX_VERSION=$(cat .vbox_version)
-  VBOX_ISO=VBoxGuestAdditions_$VBOX_VERSION.iso
-  mount -o loop $VBOX_ISO /mnt
-  yes|sh /mnt/VBoxLinuxAdditions.run
-  umount /mnt
-
+  apt-get -y install virtualbox-guest-utils
 
   # Start the newly build driver
-  /etc/init.d/vboxadd start
+  /etc/init.d/virtualbox-guest-utils start
 
   # Make a temporary mount point
   mkdir /tmp/veewee-validation
