@@ -1,5 +1,3 @@
-# WARNING: I do not use this anymore, so I will not maintains this anymore. If you plan to maintaing it yourself I'll add a link to redirect to your repository. WARNING
-
 #Jessie box for Vagrant (virtualbox)
 
 This repo contain definition files to build a
