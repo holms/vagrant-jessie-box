@@ -17,8 +17,6 @@ Just run the following command in the repository root:
     $ veewee vbox build Debian-testing-amd64-netboot
     $ veewee vbox export Debian-testing-amd64-netboot
 
-It is not currently possible to run it without GUI (`--nogui` option), since a
-bug in the grub-installer package
-([#712907](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=712907))do not
-allow the debian-installer to silently install grub. This will certainly be
-corrected in the future.
+##Issues
+
+You need to choose hdd when asked to install grub.
