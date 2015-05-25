@@ -14,8 +14,8 @@ manager to build the image.
 
 Just run the following command in the repository root:
 
-    $ veewee vbox build Debian-testing-amd64-netboot
-    $ veewee vbox export Debian-testing-amd64-netboot
+    $ veewee vbox build Debian-jessie-amd64-netboot
+    $ veewee vbox export Debian-jessie-amd64-netboot
 
 ##Issues
 
