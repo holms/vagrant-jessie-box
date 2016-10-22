@@ -6,9 +6,9 @@ Veewee::Definition.declare({
   :memory_size=> '384',
   :disk_size => '10140', :disk_format => 'VDI', :hostiocache => 'off',
   :os_type_id => 'Debian_64',
-  :iso_file => "debian-8.0.0-amd64-netinst.iso",
-  :iso_src => "http://cdimage.debian.org/debian-cd/8.0.0/amd64/iso-cd/debian-8.0.0-amd64-netinst.iso",
-  :iso_md5 => "d9209f355449fe13db3963571b1f52d4",
+  :iso_file => "debian-8.6.0-amd64-netinst.iso",
+  :iso_src => "http://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-8.6.0-amd64-netinst.iso",
+  :iso_md5 => "e9f61bf327db6d8f7cee05a99f2353cc",
   :iso_download_timeout => "1000",
   :boot_wait => "10", :boot_cmd_sequence => [
      '<Esc>',
